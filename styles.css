@@ -1,0 +1,16 @@
+body{
+    margin: 0;
+}
+
+
+
+
+.content{
+    background-image: url(/img/osman-rana-HOtPD7Z_74s-unsplash.jpg);
+    height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
