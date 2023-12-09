@@ -1,13 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <script src="script.js"></script>
+
 <body>
-    <div class="content"></div>
+    <div class="content">
+        <div class="weather">
+            <div class="search-field">
+                <input type="text" id="search">
+                <div class="logo-serc">
+                    <span class="material-symbols-outlined" id="ico" onclick="weather()">
+                        search
+                        </span>
+                </div>
+            </div>
+            <div class="details">
+            <p id="wee"></p>
+            <p id="temp"></p>
+            <div class="cloudy-details">
+            <img src="/img/cloud-svgrepo-com.svg" id="cloud">
+            <p id="description"></p>
+            <h2 id="msg">Check your area's weather using our weather app,<br>
+                Please enter your city name
+            </h2>
+            </div>
+            <p id="humidity"></p>
+            <p id="speed"></p>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>
