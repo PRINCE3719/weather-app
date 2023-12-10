@@ -13,9 +13,11 @@ function weather() {
     const s = document.getElementById("speed");
     const p = document.getElementById("cloud");
     const msg = document.getElementById("msg");
+    const err = document.getElementById("error");
 
     fetch(url, { method: "GET" })
         .then((res) => res.json())
+        
         .then((data) => {
             console.log("d", data)
             city_name.innerText = `Weather in ${data.name}`;
@@ -33,7 +35,6 @@ function weather() {
                 msg.style.display = "block";
             }
         })
-
 }
 
 

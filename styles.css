@@ -23,8 +23,7 @@ body {
     border-radius: 0.8rem;
 }
 #search{
-    padding: 9px 14px;
-    width: 18vw;
+    padding: 9px 70px 9px 14px;
     border: 0;
     background: rgba(0,0,0 ,.2);
     outline: none;
@@ -32,14 +31,17 @@ body {
     font-size: 13px;
     font-size:16px;
 }
+input::placeholder{
+    color: black;
+    font-size: 13px;
+}
 .search-field{
     display: flex;
     margin: 31px 20px;
     gap: 8px;
 }
 .logo-serc{
-    width: 45px;
-    height: 45px;
+    padding: 22px;
     background: rgba(0,0,0 ,.2);
     border-radius: 50%;
     position: relative;
@@ -78,4 +80,20 @@ margin-left: 24px;
 }
 #cloud{
     display: none;
+}
+@media only screen and (max-width: 500px) {
+   .weather{
+    width: 250px;
+    height: 280px;
+   } 
+   #search{
+    width: 20vw;
+    
+   }
+   #humidity{
+    margin:-3px 0 0 0;
+   }
+   #error{
+    display: none;
+   }
 }

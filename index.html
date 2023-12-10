@@ -15,7 +15,7 @@
     <div class="content">
         <div class="weather">
             <div class="search-field">
-                <input type="text" id="search">
+                <input type="text" id="search" placeholder="enter your location..">
                 <div class="logo-serc">
                     <span class="material-symbols-outlined" id="ico" onclick="weather()">
                         search
@@ -28,9 +28,10 @@
             <div class="cloudy-details">
             <img src="/img/cloud-svgrepo-com.svg" id="cloud">
             <p id="description"></p>
-            <h2 id="msg">Check your area's weather using our weather app,<br>
-                Please enter your city name
+            <p id="error"></p>
+            <h2 id="msg">Check your area's weather using our weather app.<br>
             </h2>
+            
             </div>
             <p id="humidity"></p>
             <p id="speed"></p>
