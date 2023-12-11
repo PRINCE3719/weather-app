@@ -38,3 +38,62 @@ function weather() {
 }
 
 
+
+
+document.addEventListener("DOMContentLoaded", function () {
+
+const arr = "https://restcountries.com/v3.1/all?fields=name";
+
+const Search = document.getElementById("search");
+const filteredList = document.getElementById("filteredList");
+let list;
+let country_array = [];
+
+Search.addEventListener("keyup", filterRest);
+
+function filterRest() {
+
+        const new_value = Search.value.toLowerCase();
+        const filtered_arr = country_array.filter((item) => item.toLowerCase().includes(new_value));
+
+        filteredList.innerHTML ="";
+
+        if (!new_value.trim()) {
+            filteredList.style.display = "none";
+            return;
+        }
+        
+
+
+        for(const d of filtered_arr){
+            list = document.createElement("li");
+            list.textContent = d;
+            list.addEventListener("click",() =>{
+                Search.value = d;
+                filteredList.style.display = "none";
+                filteredList.innerHTML = "";
+            });
+            filteredList.appendChild(list);
+        }
+        if(list == ""){
+            filteredList.style.display = "none";
+        }else{
+             filteredList.style.display = "block";
+        }
+        
+        
+
+}
+window.onload = function(){
+    fetch(arr, { method: "GET" })
+    .then((res) => res.json())
+    .then((country) => {
+        country.map((c) => {
+            const loop = c.name.common;
+            country_array.push(loop);
+        })
+    });
+}
+
+});
+
