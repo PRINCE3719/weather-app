@@ -158,6 +158,6 @@ p {
 
     #filteredList {
         width: 40vw;
-        bottom: 31px;
+        margin-top: -29px;
     }
 }
